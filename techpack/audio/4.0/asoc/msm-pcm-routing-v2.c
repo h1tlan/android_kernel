@@ -7864,6 +7864,18 @@ static const struct snd_kcontrol_new tert_mi2s_rx_port_mixer_controls[] = {
 	MSM_BACKEND_DAI_TERTIARY_MI2S_RX,
 	MSM_BACKEND_DAI_SLIMBUS_8_TX, 1, 0, msm_routing_get_port_mixer,
 	msm_routing_put_port_mixer),
+	// Add for mic2 to speaker loopback test lct_20191105
+	SOC_DOUBLE_EXT("TX_CDC_DMA_TX_3", SND_SOC_NOPM,
+	MSM_BACKEND_DAI_TERTIARY_MI2S_RX,
+	MSM_BACKEND_DAI_TX_CDC_DMA_TX_3, 1, 0, msm_routing_get_port_mixer,
+	msm_routing_put_port_mixer),
+    /* 2019.11.26 longcheer lixiaona edit start */
+    /* add TX4  */
+    SOC_DOUBLE_EXT("TX_CDC_DMA_TX_4", SND_SOC_NOPM,
+    MSM_BACKEND_DAI_TERTIARY_MI2S_RX,
+    MSM_BACKEND_DAI_TX_CDC_DMA_TX_4, 1, 0, msm_routing_get_port_mixer,
+    msm_routing_put_port_mixer),
+    /* 2019.11.26 longcheer lixiaona edit end */
 };
 
 static const struct snd_kcontrol_new quin_mi2s_rx_port_mixer_controls[] = {
